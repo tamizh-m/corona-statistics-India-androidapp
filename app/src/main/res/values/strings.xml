@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Corona statistics</string>
+    <string name="caption">Corona statistics</string>
+    <string name="state_caption">Select state:</string>
+    <string name="selectState">Please select a state! </string>
+</resources>

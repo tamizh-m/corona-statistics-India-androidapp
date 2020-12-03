@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <TextView
+        android:id="@+id/app_title"
+        android:layout_width="250dp"
+        android:layout_height="46dp"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text= "@string/caption"
+        android:textColor="#000000"
+        android:textColorHighlight="#D65C5C"
+        android:textSize="24sp"
+       android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentTop="true"
+
+        />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="109dp"
+        android:layout_height="170dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/app_title"
+         android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/corona_removebg_preview" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="119dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-black"
+        android:layout_below="@id/imageView2"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/stateCaption"
+        android:layout_width="119dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/state_caption"
+        android:layout_below="@id/date"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/stateSpinner"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/stateCaption"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@android:drawable/btn_dropdown">
+
+    </Spinner>
+
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#299800"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/stateSpinner"
+        android:layout_centerInParent="true"
+        android:text="Find!" />
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="273dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-black"
+        android:layout_below="@id/submitButton"
+        android:layout_centerInParent="true"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"/>
+
+</RelativeLayout>
+</ScrollView>
