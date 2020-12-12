@@ -24,6 +24,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.net.URLDecoder;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Calendar;
 
 import okhttp3.Call;
@@ -105,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         Request request = new Request.Builder()
                 .url("https://corona-virus-world-and-india-data.p.rapidapi.com/api_india")
                 .get()
-                .addHeader("x-rapidapi-key", "**********************************")
+                .addHeader("x-rapidapi-key", "014fdd46a9msh40e01402ae728d1p179b66jsnf43a77de8d9e")
                 .addHeader("x-rapidapi-host", "corona-virus-world-and-india-data.p.rapidapi.com")
                 .build();
 
@@ -117,7 +118,14 @@ public class MainActivity extends AppCompatActivity {
         JSONObject stateJson;
         String active;
         String deltaConfirmed;
-        switch(state.getStateName()){
+        if(Arrays.asList(mStates).contains(state.getStateName()) ){
+            stateJson = stateWise.getJSONObject(state.getStateName());
+            active = stateJson.getString("active");
+            deltaConfirmed = stateJson.getString("deltaconfirmed");
+            Log.d("msg",active);
+            count.setText("Total cases active: "+ active +"\n" + "Total cases today: " + deltaConfirmed);
+        }
+        /*switch(state.getStateName()){
             case "Maharashtra" :
                 stateJson = stateWise.getJSONObject("Maharashtra");
                 active = stateJson.getString("active");
@@ -347,7 +355,7 @@ public class MainActivity extends AppCompatActivity {
 
             default:
                 count.setText("Please select a State");
-        }
+        }*/
 
 
     }
