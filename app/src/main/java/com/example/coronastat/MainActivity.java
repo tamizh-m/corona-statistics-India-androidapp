@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         Request request = new Request.Builder()
                 .url("https://corona-virus-world-and-india-data.p.rapidapi.com/api_india")
                 .get()
-                .addHeader("x-rapidapi-key", "*******************************")
+                .addHeader("x-rapidapi-key", "********************************")
                 .addHeader("x-rapidapi-host", "corona-virus-world-and-india-data.p.rapidapi.com")
                 .build();
 
